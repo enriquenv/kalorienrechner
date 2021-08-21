@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalorien-Rechner</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <main>
+        <form action="" onsubmit="return false">
+
+        <h1>Kalorienrechner</h1>
+
+        <div>
+            <label for="größe">Körpergröße</label><br>
+            <input type="number" name="größe" id="größe" placeholder="cm">
+        </div>
+
+        <div>
+            <label for="alter">Alter</label><br>
+            <input type="number" name="alter" id="alter" placeholder="Jahren">
+        </div>
+        
+        <div>
+            <label for="gewicht">Gewicht</label><br>
+            <input type="number" name="gewicht" id="gewicht" placeholder="kg"> 
+        </div>
+
+        <div id="gender">
+            <h4>Körperbau</h4>
+            <input type="radio" name="gender" id="männlich">
+            <label for="männlich">Männlich</label><br>
+            <input type="radio" name="gender" id="weiblich">
+            <label for="weiblich">Weiblich</label>
+        </div><br>
+
+        <label id="activity" for="pal">Arbeits- und Freizeitsaktivität</label><br>
+        <select name="pal" id="pal">
+            <option value="0.95">Schlafen</option>
+            <option value="1.2">Nur Sitzen oder Liegen</option>
+            <option value="1.5">Ausschließlich sitzende Tätigkeit mit wenig oder keiner körperlichen Aktivität in der Freizeit, z.B. Büroarbeit</option>
+            <option value="1.7">Sitzende Tätigkeit mit zeitweilig gehender oder stehender Tätigkeit, z.B. Studierende, Fließbandarbeiter, Laboranten, Kraftfahrer</option>
+            <option value="1.9">Überwiegend gehende oder stehende Tätigkeit, z.B. Verkäufer, Kellner, Handwerker, Mechaniker, Hausfrauen</option>
+            <option value="2.2">Körperlich anstrengende berufliche Arbeit</option>
+        </select><br><br>
+
+        <div id="button">
+            <input type="submit" value="Submit" onclick="rechnen()">
+        </div><br>
+
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>kcal</th>
+                    <th>kJ</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Grundumsatz</td>
+                    <td id="grundkcal"></td>
+                    <td id="grundkJ"></td>
+                </tr>
+                <tr>
+                    <td>Gesamtumsatz</td>
+                    <td id="gesamtkcal"></td>
+                    <td id="gesamtkJ"></td>
+                </tr>
+            </tbody>
+        </table><br>
+
+        <p>Das Ergebnis des Rechners sollten Sie als Orientierungswert ansehen, da es verschiedene Fehlermöglichkeiten gibt wie abweichender Grundumsatz, falsche Zeiteinschätzung, etc.</p>
+
+        </form>
+    </main>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
